@@ -6,7 +6,7 @@ export default class {
   constructor() {
     const localData = localStorage.getItem('content');
 
-    // check if CodeMirror is loaded
+    // check if CodeMirror is loaded, a code editor component for the web.  Used in websites to implement text input field with support for editing features 
     if (typeof CodeMirror === 'undefined') {
       throw new Error('CodeMirror is not loaded');
     }
