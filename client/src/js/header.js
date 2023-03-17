@@ -10,3 +10,5 @@ just another text editor
 `;
 
 export { header };
+
+//DOMINIQUE this doesn't show at all
