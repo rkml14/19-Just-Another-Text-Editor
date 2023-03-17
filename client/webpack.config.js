@@ -20,7 +20,8 @@ module.exports = () => {
       //Webpack plug to generate html files & injects the bundles
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'JATE'
+        title: 'JATE',
+        favicon: 'favicon.ico',
       }),
      
       // Injects our custom service worker
@@ -45,6 +46,7 @@ module.exports = () => {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
+            
           }
         ]
       })
