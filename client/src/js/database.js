@@ -26,7 +26,7 @@ const tx = jateDb.transaction('jate', 'readwrite');
 const store = tx.objectStore('jate');
 
  // Use the .put method to add data in the database.
- const request = store.put({ id: 1, value: content });
+ const request = store.put({ text: content });
 
 // Get confirmation of the request.
 const result = await request;
@@ -55,13 +55,13 @@ export const getDb = async () => {
   const store = tx.objectStore('jate');
 
   // Use the .getAll() method to get all data in the database.
-  const request = store.get(1);
+  const request = store.getAll();
 
    // Get confirmation of the request.
   const result = await request;
   console.log('result.value', result);
   // return result?.value;
-  return result;
+  return result.value;
 }
 
 //DOMINIQUE 
