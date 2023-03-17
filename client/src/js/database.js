@@ -33,14 +33,6 @@ const result = await request;
 console.log('🚀 - data saved to the database', result);
 }
 
-
-//DOMINIQUE 
-// console.error('putDb not implemented');
-
-
-
-
-
 // Added logic for a method that gets all the content from the database
 export const getDb = async () => {
   console.log('GET from the database');
@@ -60,11 +52,7 @@ export const getDb = async () => {
    // Get confirmation of the request.
   const result = await request;
   console.log('result.value', result);
-  // return result?.value;
   return result.value;
 }
-
-//DOMINIQUE 
-// console.error('getDb not implemented');
 
 initdb();

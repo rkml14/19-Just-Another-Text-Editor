@@ -1,5 +1,3 @@
-//offlineFallback seems like a hint DOMINIQUE
-
 const { offlineFallback, warmStrategyCache } = require('workbox-recipes');
 const { StaleWhileRevalidate, CacheFirst } = require('workbox-strategies');
 const { registerRoute } = require('workbox-routing');
@@ -27,7 +25,6 @@ warmStrategyCache({
   strategy: pageCache,
 });
 
-//DOMINIQUE why is registerRoute in here twice?
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // Implemented asset caching
