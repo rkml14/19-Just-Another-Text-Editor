@@ -19,11 +19,11 @@ module.exports = () => {
     plugins: [
       //Webpack plug to generate html files & injects the bundles
       new HtmlWebpackPlugin({
-        template: './index.js',
+        template: './index.html',
         title: 'JATE'
       }),
-
-      //Injects the custom service worker
+     
+      // Injects our custom service worker
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
@@ -37,9 +37,9 @@ module.exports = () => {
         short_name: 'JATE',
         description: 'Unless we remember, we cannot understand',
         background_color: '#225ca3',
-        theme_color: '#AC93D5',
-        start_url: './',
-        publicPath: './',
+        theme_color: '#225ca3',
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -60,7 +60,7 @@ module.exports = () => {
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
-          // babel-loader in order to use ES6.
+          // We use babel-loader in order to use ES6.
           use: {
             loader: 'babel-loader',
             options: {
@@ -69,7 +69,6 @@ module.exports = () => {
             },
           },
         },
-
       ],
     },
   };
